@@ -29,8 +29,7 @@
 <body>
     <div id="myApp">
         <ul>
-            <li>{{students[0]}} Gwapo</li>
-            <li>{{students[1]}} Gwapo</li>
+            <li v-for="student in students" >{{student}} Gwapo</li>
         </ul>
     </div>
     <script>
@@ -39,7 +38,10 @@
             data: {
                 students: [
                     'Usman',
-                    'Matin'                    
+                    'Matin',
+                    'Felix',
+                    'Magongcar',
+                    'Omair'                
                 ]
             }
         })
