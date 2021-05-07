@@ -28,6 +28,8 @@
 </head>
 <body>
     <div id="myApp">
+        <input type="text" v-model="applicant" > 
+        <div @click="addApplicant">Add  {{applicant}}</div>
         <ul>
             <li v-for="student in students" >{{student}} Gwapo</li>
         </ul>
@@ -36,6 +38,7 @@
         var app = new Vue({
             el: '#myApp',
             data: {
+                applicant: "",
                 students: [
                     'Usman',
                     'Matin',
@@ -43,6 +46,11 @@
                     'Magongcar',
                     'Omair'                
                 ]
+            },
+            methods: {
+                addApplicant(){
+                    alert('adding');
+                }
             }
         })
     </script>
