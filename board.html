@@ -31,7 +31,7 @@
         <input type="text" v-model="applicant" > 
         <div @click="addApplicant">Add  {{applicant}}</div>
         <ul>
-            <li v-for="student in students" >{{student}} Gwapo</li>
+            <li v-for="student in students" >{{student.name}} Gwapo</li>
         </ul>
     </div>
     <script>
@@ -39,13 +39,25 @@
             el: '#myApp',
             data: {
                 applicant: "",
-                students: [
-                    'Usman',
-                    'Matin',
-                    'Felix',
-                    'Magongcar',
-                    'Omair'                
-                ]
+                scoring: {
+                    'Usman': 0,
+                    'Matin': 0,
+                    'Felix': 0,
+                    'Magongcar': 0,
+                    'Omair': 0                
+                }
+            },
+            computed: {
+                //[{name: ''}]
+                students(){
+                    return Object.keys(this.scoring)
+                        //map string to object {name}
+                        .map((studentName) => {
+                            return {
+                                name: studentName
+                            }
+                        })
+                }
             },
             methods: {
                 addApplicant(){
