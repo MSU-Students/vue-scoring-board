@@ -11,5 +11,8 @@
     "url": "student_scoring"
   },
   "author": "ITS Marawi",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "vue": "^2.6.12"
+  }
 }
