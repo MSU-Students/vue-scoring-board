@@ -7,7 +7,8 @@
     <title>Scoring</title>
     <style>
         div {
-            color: pink;
+            color: blue;
+            font-size: xx-large;
         }
         li  {
             font-weight: bold;
@@ -23,28 +24,26 @@
         }
     </style>
     <script src="node_modules/vue/dist/vue.min.js"></script>
+    
 </head>
 <body>
-    <input type="color" >
-    <ol>
-        <li>
-            <div id="gwapo">Usman</div>
-        </li>
-        <li>
-            <div id="gwapo">Usman</div>
-        </li>
-        <li>
-            <div id="gwapo">Usman</div>
-        </li>
-        <li>
-            <span id="gwapo">Usman</span>
-        </li>
-        <li>
-            <ol>
-                <li id="gwapa">Maglipac</li> <li>Krystianne</li>
-            </ol>
-        </li>
-    </ol>
+    <div id="myApp">
+        <ul>
+            <li>{{students[0]}} Gwapo</li>
+            <li>{{students[1]}} Gwapo</li>
+        </ul>
+    </div>
+    <script>
+        var app = new Vue({
+            el: '#myApp',
+            data: {
+                students: [
+                    'Usman',
+                    'Matin'                    
+                ]
+            }
+        })
+    </script>
 </body>
 
 </html>
