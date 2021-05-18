@@ -49,19 +49,12 @@
             },
             computed: {
                 //[{name: ''}]
-                students(){
-                    return Object.keys(this.scoring)
-                        //map string to object {name}
-                        .map((studentName) => {
-                            return {
-                                name: studentName
-                            }
-                        })
-                }
+                
             },
             methods: {
                 addApplicant(){
-                    this.students.push(this.applicant);
+                    this.scoring[this.applicant] = 0;
+                    this.$forceUpdate();
                 }
             }
         })
